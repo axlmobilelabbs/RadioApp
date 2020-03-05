@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RadioStations</string>
+    <string name="station_name">Station Name</string>
+    <string name="station_frequency">Station Frequency</string>
+    <string name="station_city">Station City</string>
+    <string name="station_band">Station Band</string>
+</resources>

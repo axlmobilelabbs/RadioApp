@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/radioListFragment">
+
+    <fragment
+        android:id="@+id/radioListFragment"
+        android:name="com.example.radiostations.ui.fragment.RadioListFragment"
+        android:label="fragment_radio_list"
+        tools:layout="@layout/fragment_radio_list" >
+        <action
+            android:id="@+id/action_radioListFragment_to_radioDetailFragment"
+            app:destination="@id/radioDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/radioDetailFragment"
+        android:name="com.example.radiostations.ui.fragment.RadioDetailFragment"
+        android:label="fragment_radio_detail"
+        tools:layout="@layout/fragment_radio_detail" >
+        <action
+            android:id="@+id/action_radioListFragment_to_radioDetailFragment"
+            app:popUpTo="@id/radioListFragment" />
+        <argument
+            android:name="position"
+            app:argType="string" />
+    </fragment>
+</navigation>
